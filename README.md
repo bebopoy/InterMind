@@ -1,6 +1,8 @@
 # InterMind assitant for mental health
 InterMind is a mental health assistant that helps users manage their emotions and stress levels. It provides resources and support for individuals who are struggling with mental health issues.
 
+文档添加中。。。
+
 # 结构框架
 ```
 ├── config
