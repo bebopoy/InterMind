@@ -1,9 +1,14 @@
 # InterMind assitant for mental health
+
 InterMind is a mental health assistant that helps users manage their emotions and stress levels. It provides resources and support for individuals who are struggling with mental health issues.
 
-文档添加中。。。
+InterMind是一款帮助用户管理情绪和压力水平的心理健康助手。它为那些与心理健康问题作斗争的个人提供资源和支持。
 
-# 结构框架
+开源数据集来源[EmoLLM]（https://github.com/SmartFlowAI/EmoLLM/tree/main/datasets）
+
+项目贡献者 bebopoy、ACT-chao、leihuang
+
+# 结构框架一览
 ```
 ├── config
 │   └── internlm2_chat_7b_qlora_alpaca_e3_copy.py
@@ -70,20 +75,23 @@ InterMind is a mental health assistant that helps users manage their emotions an
 │   │       ├── eval_outputs_iter_1499.txt
 │   │       ├── eval_outputs
 ```
-# model
-    存放初始模型文件
+# model-基于InternLM2_chat_7b
+
+存放初始模型文件,详情请见[InternLM2-Chat-7B](https://github.com/bebopoy/InterMind/blob/master/model/README.md)说明文档
 # config 
-    存放了配置文件——internlm2_chat_7b_qlora_alpaca_e3_copy.py
-    用于对模型进行微调
+
+存放了配置文件——internlm2_chat_7b_qlora_alpaca_e3_copy.py用于对模型进行微调，可[参考说明](https://github.com/InternLM/xtuner/blob/main/docs/zh_cn/user_guides/config.md)
 # data 
-    存放数据集——InterMind_data.jsonl，包含了单轮次对话数据集与自我认知数据集
+存放数据集——InterMind_data.jsonl，包含了单轮次对话数据集与自我认知数据集。
+单轮次对话数据集——*convert_SoulStar_data.jsonl*（数据来源[EmoLLM](https://github.com/SmartFlowAI/EmoLLM/tree/main/datasets)）
+自我认知数据集——*convert_self_cognition_InterMind.jsonl*
 # train
-    存放训练所得.pth 文件，以待被转化为hunggingface文件
+存放训练所得.pth 文件，有iter_7500.th和iter_8000.th,分别为7000轮次和8000轮此的训练结果，以待被转化为hunggingface文件（Adapter）
 # hunggingface
-    存放hunggingface文件,以待被合并并且送至final_model文件中
+存放hunggingface文件（Adapter）,以待被合并为大预言模型并送至final_model文件中
 # final_model 
-    存放了训练好的模型——InterMind 聊天机器人
+存放了训练成果的模型——InterMind 聊天机器人
 #   web_demo
-    存放了web_demo文件，用于web演示
+存放了web_demo文件，用于web演示
 #   requirments.txt
-    环境要求
+python第三方库环境要求
