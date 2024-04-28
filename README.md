@@ -4,7 +4,7 @@ InterMind is a mental health assistant that helps users manage their emotions an
 
 InterMind是一款帮助用户管理情绪和压力水平的心理健康助手。它为那些与心理健康问题作斗争的个人提供资源和支持。
 
-开源数据集来源[EmoLLM]（https://github.com/SmartFlowAI/EmoLLM/tree/main/datasets）
+开源数据集来源[EmoLLM](https://github.com/SmartFlowAI/EmoLLM/tree/main/datasets)
 
 项目贡献者 bebopoy、ACT-chao、leihuang
 
